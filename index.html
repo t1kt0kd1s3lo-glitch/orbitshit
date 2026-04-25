@@ -58,22 +58,44 @@
             margin-bottom: 40px;
         }
 
+        .btn-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         .download-btn {
             background: linear-gradient(90deg, #4d5af1, #0ea5e9);
             color: white;
-            padding: 22px 60px;
+            padding: 22px 40px;
             font-weight: 900;
             text-transform: uppercase;
             text-decoration: none;
             border-radius: 2px;
-            font-size: 1.2rem;
+            font-size: 1rem;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             box-shadow: 0 4px 20px rgba(77, 90, 241, 0.3);
+            border: none;
         }
 
-        .download-btn:hover {
+        .secondary-btn {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 22px 40px;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 2px;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .download-btn:hover, .secondary-btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(14, 165, 233, 0.5);
+            background: white;
+            color: black;
         }
 
         .container {
@@ -140,7 +162,10 @@
     <section class="hero">
         <h1>PROJECT ORBIT</h1>
         <h2>CHAPTER 4 SEASON 2</h2>
-        <a href="https://github.com/t1kt0kd1s3lo-glitch/orbitshit/releases/download/launcher_0.0.1/Orbit_0.0.1_x64_en-US.msi" class="download-btn">Download for Windows</a>
+        <div class="btn-container">
+            <a href="https://github.com/t1kt0kd1s3lo-glitch/orbitshit/releases/download/launcher_0.0.1/Orbit_0.0.1_x64_en-US.msi" class="download-btn">Download Launcher</a>
+            <a href="https://r2.ploosh.dev/24.20.zip" class="secondary-btn">Download Build</a>
+        </div>
     </section>
 
     <div class="container">
@@ -177,7 +202,10 @@
 
         <div class="bottom-cta">
             <h2 style="font-size: 4rem; font-weight: 900; margin-bottom: 40px; text-transform: uppercase;">READY TO JOIN?</h2>
-            <a href="https://github.com/t1kt0kd1s3lo-glitch/orbitshit/releases/download/launcher_0.0.1/Orbit_0.0.1_x64_en-US.msi" class="download-btn">Download Orbit Now!</a>
+            <div class="btn-container">
+                <a href="https://github.com/t1kt0kd1s3lo-glitch/orbitshit/releases/download/launcher_0.0.1/Orbit_0.0.1_x64_en-US.msi" class="download-btn">Download Orbit Launcher!</a>
+                <a href="https://r2.ploosh.dev/24.20.zip" class="secondary-btn">Download Build</a>
+            </div>
         </div>
     </div>
 
