@@ -11,7 +11,7 @@
     <style>
         :root {
             --bg-black: #000000;
-            --card-bg: #050505;
+            --card-bg: rgba(10,10,10,0.6);
             --border-color: #1a1a1a;
             --mega-teal: #00f2ff;
             --text-gray: #a1a1aa;
@@ -53,7 +53,7 @@
 
         .hero {
             height: 95vh;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), var(--bg-image-path); 
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), var(--bg-image-path);
             background-size: cover;
             background-position: center;
             display: flex;
@@ -96,11 +96,10 @@
             font-weight: 900;
             text-transform: uppercase;
             text-decoration: none;
-            border-radius: 2px;
+            border-radius: 4px;
             font-size: 1rem;
-            transition: all 0.3s;
-            box-shadow: 0 4px 20px rgba(77, 90, 241, 0.3);
-            border: none;
+            transition: 0.25s;
+            box-shadow: 0 4px 20px rgba(77, 90, 241, 0.35);
         }
 
         .secondary-btn {
@@ -111,13 +110,13 @@
             font-weight: 900;
             text-transform: uppercase;
             text-decoration: none;
-            border-radius: 2px;
+            border-radius: 4px;
             font-size: 1rem;
-            transition: 0.3s;
+            transition: 0.25s;
         }
 
         .download-btn:hover, .secondary-btn:hover {
-            transform: scale(1.05);
+            transform: translateY(-3px) scale(1.03);
             background: white;
             color: black;
         }
@@ -143,16 +142,18 @@
         }
 
         .feature-card {
-            background-color: var(--card-bg);
+            background: var(--card-bg);
             border: 1px solid var(--border-color);
             padding: 50px 40px;
-            border-radius: 6px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
             transition: 0.3s;
         }
 
         .feature-card:hover {
             border-color: var(--mega-teal);
-            transform: translateY(-5px);
+            transform: translateY(-6px);
+            box-shadow: 0 0 25px rgba(0,242,255,0.15);
         }
 
         .feature-card h3 {
@@ -183,67 +184,80 @@
 </head>
 <body>
 
-    <a href="https://discord.gg/KBbVb7TjqX" target="_blank" class="discord-corner">Join Discord!</a>
+<a href="https://discord.gg/KBbVb7TjqX" target="_blank" class="discord-corner">Join Discord</a>
 
-    <section class="hero">
-        <h1>PROJECT ORBIT</h1>
-        <h2>CHAPTER 4 SEASON 2</h2>
-        <div class="btn-container">
-            <a href="https://github.com/t1kt0kd1s3lo-glitch/orbitshit/releases/download/launcher_0.0.1/Orbit_0.0.1_x64_en-US.msi" class="download-btn">Download Launcher</a>
-            <a href="https://r2.ploosh.dev/24.20.zip" class="secondary-btn">Download Build</a>
-        </div>
-    </section>
+<section class="hero">
+    <h1>PROJECT ORBIT</h1>
+    <h2>CHAPTER 4 SEASON 2</h2>
 
-    <div class="container">
-        <div class="section-header">
-            <h2>Why Play Orbit?</h2>
-        </div>
+    <div class="btn-container">
+        <a href="https://github.com/t1kt0kd1s3lo-glitch/orbitshit/releases/download/launcher_0.0.1/Orbit_0.0.1_x64_en-US.msi" class="download-btn">
+            Download Launcher (MSI)
+        </a>
 
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>Free to Play</h3>
-                <p>Completely free to download and play.</p>
-            </div>
-            <div class="feature-card">
-                <h3>OG Movement</h3>
-                <p>Experience classic mechanics.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Earn by Playing</h3>
-                <p>25 V-Bucks per kill, 250 per win.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Battle Pass</h3>
-                <p>Unlock skins by leveling up.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Item Shop</h3>
-                <p>Daily rotating classic skins.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Active Players</h3>
-                <p>Growing community.</p>
-            </div>
+        <a href="https://github.com/t1kt0kd1s3lo-glitch/orbitshit/releases/download/launcher_0.0.1/Orbit_0.0.1_x64-setup.exe" class="secondary-btn">
+            Download Launcher (EXE)
+        </a>
+    </div>
+</section>
+
+<div class="container">
+    <div class="section-header">
+        <h2>Why Play Orbit?</h2>
+    </div>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3>Free to Play</h3>
+            <p>No cost. Just download and jump in.</p>
         </div>
 
-        <div class="bottom-cta">
-            <h2 style="font-size: 4rem; font-weight: 900; margin-bottom: 40px;">READY TO JOIN?</h2>
-            
-            <div class="btn-container" style="flex-direction: column; align-items: center;">
-                <a href="https://github.com/t1kt0kd1s3lo-glitch/orbitshit/releases/download/launcher_0.0.1/Orbit_0.0.1_x64_en-US.msi" class="download-btn">
-                    Download Orbit Launcher!
-                </a>
+        <div class="feature-card">
+            <h3>OG Movement</h3>
+            <p>Classic mechanics, no changes.</p>
+        </div>
 
-                <a href="https://your-second-download-link.com" class="secondary-btn" style="margin-top: 15px;">
-                    Second Download!
-                </a>
-            </div>
+        <div class="feature-card">
+            <h3>Earn by Playing</h3>
+            <p>25 V-Bucks per kill, 250 per win.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Battle Pass</h3>
+            <p>Unlock exclusive rewards as you level up.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Item Shop</h3>
+            <p>Daily skins using earned currency.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Active Community</h3>
+            <p>Players online and growing.</p>
         </div>
     </div>
 
-    <footer>
-        <p>© 2026 PROJECT ORBIT. ALL RIGHTS RESERVED.</p>
-    </footer>
+    <div class="bottom-cta">
+        <h2 style="font-size: 4rem; font-weight: 900; margin-bottom: 40px;">
+            READY TO JOIN?
+        </h2>
+
+        <div class="btn-container" style="flex-direction: column; align-items: center;">
+            <a href="https://github.com/t1kt0kd1s3lo-glitch/orbitshit/releases/download/launcher_0.0.1/Orbit_0.0.1_x64_en-US.msi" class="download-btn">
+                Download Launcher (MSI)
+            </a>
+
+            <a href="https://github.com/t1kt0kd1s3lo-glitch/orbitshit/releases/download/launcher_0.0.1/Orbit_0.0.1_x64-setup.exe" class="secondary-btn" style="margin-top: 15px;">
+                Download Launcher (EXE)
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 PROJECT ORBIT. ALL RIGHTS RESERVED.</p>
+</footer>
 
 </body>
 </html>
