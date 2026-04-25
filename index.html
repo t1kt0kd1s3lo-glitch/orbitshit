@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orbit</title>
+    
+    <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1467027009363513519/1497412397579898880/orbit2.png?ex=69ed6d78&is=69ec1bf8&hm=cbf170fe913538dd0f39f5c8768ccb9f8dfd090b71e723c3c6ab1052db8a9c02">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -12,8 +15,6 @@
             --border-color: #1a1a1a;
             --mega-teal: #00f2ff;
             --text-gray: #a1a1aa;
-            
-           
             --bg-image-path: url('https://cdn.discordapp.com/attachments/1467027009363513519/1497335436262117517/Fortnite-Chapter-4-Season-2-Battle-Pass-Header.webp?ex=69ed25cb&is=69ebd44b&hm=255152dbd4fdfe8eb4062cc7f3b28cf7f3beac2d6927c4fbdceabf892c047742');
         }
 
@@ -26,12 +27,9 @@
             overflow-x: hidden;
         }
 
-        
         .hero {
             height: 95vh;
-            /* A gradient overlay keeps the text legible against the image */
-            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.9)), 
-                        var(--bg-image-path); 
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), var(--bg-image-path); 
             background-size: cover;
             background-position: center;
             display: flex;
@@ -39,6 +37,13 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+        }
+
+        /* Hero Logo Styling */
+        .hero-logo {
+            width: 120px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 15px rgba(0, 242, 255, 0.5));
         }
 
         .hero h1 {
@@ -60,7 +65,6 @@
             margin-bottom: 40px;
         }
 
-       
         .download-btn {
             background: linear-gradient(90deg, #4d5af1, #0ea5e9);
             color: white;
@@ -75,12 +79,10 @@
         }
 
         .download-btn:hover {
-            color: white;
-            transform: scale(1.1);
+            transform: scale(1.05);
             box-shadow: 0 0 30px rgba(14, 165, 233, 0.5);
         }
 
-        /* --- Content Layout --- */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -93,10 +95,8 @@
             font-weight: 900;
             text-transform: uppercase;
             margin-bottom: 60px;
-            letter-spacing: -1px;
         }
 
-       
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -121,16 +121,13 @@
             font-weight: 900;
             text-transform: uppercase;
             margin-bottom: 15px;
-            color: white;
         }
 
         .feature-card p {
             color: var(--text-gray);
             line-height: 1.6;
-            font-size: 1.1rem;
         }
 
-        /* --- Bottom --- */
         .bottom-cta {
             text-align: center;
             padding: 120px 20px;
@@ -142,28 +139,14 @@
             border-top: 1px solid var(--border-color);
             color: var(--text-gray);
             font-size: 0.85rem;
-            letter-spacing: 1px;
-        }
-
-        .footer-socials {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .footer-socials a {
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
     <section class="hero">
+        <img src="https://cdn.discordapp.com/attachments/1467027009363513519/1497412397579898880/orbit2.png?ex=69ed6d78&is=69ec1bf8&hm=cbf170fe913538dd0f39f5c8768ccb9f8dfd090b71e723c3c6ab1052db8a9c02" alt="Orbit Logo" class="hero-logo">
+        
         <h1>PROJECT ORBIT</h1>
         <h2>CHAPTER 4 SEASON 2</h2>
         <a href="https://github.com/t1kt0kd1s3lo-glitch/orbitshit/releases/download/launcher_0.0.1/Orbit_0.0.1_x64_en-US.msi" class="download-btn">Download for Windows</a>
@@ -209,6 +192,7 @@
 
     <footer>
         <p>© 2026 PROJECT ORBIT. ALL RIGHTS RESERVED.</p>
-       
+    </footer>
+
 </body>
 </html>
